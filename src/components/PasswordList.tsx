@@ -10,6 +10,9 @@ const PasswordList = ({ passwordlist }: any) => {
           passwordlist.map((password: string, i: number) => (
             <PasswordsListItem password={password} key={i.toString()} />
           ))}
+        {passwordlist.length === 0 && (
+          <div className='font-extrabold p-5'> Passwords not found...</div>
+        )}
       </div>
     </div>
   );
