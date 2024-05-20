@@ -11,15 +11,15 @@ const PasswordsListItem = ({ password }: { password: string }) => {
 
   return (
     <>
-      <div className='flex justify-between bg-slate-200 p-3 rounded-md '>
-        <div>{password}</div>
+      <div className='flex justify-between bg-slate-200 p-3 rounded-md cursor-pointer'>
+        <div className='font-semibold'>{password}</div>
         {!copied ? (
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
             strokeWidth={2}
-            className='w-6 h-6 stroke-slate-500'
+            className='w-6 h-6 stroke-slate-500 hover:stroke-slate-700'
             onClick={() => {
               setCopied(true);
               navigator.clipboard.writeText(password);
